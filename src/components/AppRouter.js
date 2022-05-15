@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from "react-router-dom";
 import { publicRoutes } from '../routes';
 import { HOME_ROUTE } from '../util/consts';
@@ -10,12 +10,23 @@ export const Context = React.createContext(null);
 const AppRouter = () => {
     const [request, setRequest] = useState("");
     const [images, setImages] = useState([]);
+    const [error, setError] = useState(null);
 
     const response = async(value) => {
-        let request = await responsePhoto(value);
-        let hits = request.hits;
-        setImages(hits);
+        try {
+            let request = await responsePhoto(value);
+            let hits = request.hits;
+            setImages(hits);
+        }catch(e) {
+            setError(e);
+        }
     }
+
+    useEffect(() => {
+        if(error) {
+            alert(error)
+        }
+    }, [error])
 
     return (
         <Context.Provider
