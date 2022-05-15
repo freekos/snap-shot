@@ -21,6 +21,8 @@
 ## In order to familiarize yourself with the functionality and see an example, follow the link:
 https://freekos.github.io/React-Snap-Shot-Page/
 
+### There may be a page refresh bug with a github (404) error
+
 😀😀😀Thank you for your attention😜😜😜
 
 
