@@ -16,7 +16,7 @@
 * Image search service(Pixabay).
 
 ## In order to start working:
-* #npm init and npm start
+* #npm start
 
 ## In order to familiarize yourself with the functionality and see an example, follow the link:
 https://freekos.github.io/React-Snap-Shot-Page/
